@@ -16,7 +16,7 @@ public class RunTime {
 	        
 	       
 	        
-	        app.setDisplayMode(800,600,false);
+	        app.setDisplayMode(800,400,false);
 	        
 	    
 	     

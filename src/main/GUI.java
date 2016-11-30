@@ -22,6 +22,11 @@ import org.newdawn.slick.util.ResourceLoader;
 public class GUI extends BasicGame{
 
 	private Image turret = null;
+	private Image turret_rechts = null;
+	private Image truck = null;
+	private Image[][] spielfeld = null;
+	
+	private Spielfeld bauer = new Spielfeld();
 	
 	public GUI(String title) {
 		super(title);
@@ -31,6 +36,11 @@ public class GUI extends BasicGame{
 	@Override
 	public void init(GameContainer arg0) throws SlickException {
 		turret = new Image("Bilder/Turret_2_0.png");
+		turret_rechts = turret.getFlippedCopy(true, false);
+		truck = new Image("Bilder/Truck.png");
+		
+		
+		spielfeld = bauer.spielenInitialisieren();
 	}
 
 	@Override
@@ -40,7 +50,16 @@ public class GUI extends BasicGame{
 	
 	@Override
 	public void render(GameContainer arg0, Graphics arg1) throws SlickException {
-		turret.draw(1, 1);
+		//turret.draw(1, 1);
+		for(int i=0;i<16;i++){
+				for(int y=0;y<16;y++){
+				  spielfeld[i][y].draw((i*50),(y*50));
+				}
+		}
+		
+		turret.draw(0, 0);
+		turret_rechts.draw(750, 0);
+		turret.draw(0, 350);
+		turret_rechts.draw(750, 350);
 	}
-
 }
