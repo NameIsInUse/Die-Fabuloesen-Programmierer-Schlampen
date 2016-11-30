@@ -1,4 +1,4 @@
-package obtowerdefense;
+package main;
 
 public class lane {
 	private int y;

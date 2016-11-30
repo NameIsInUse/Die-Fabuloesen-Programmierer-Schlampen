@@ -1,1 +1,0 @@
-# Die-Fabuloesen-Programmierer-Schlampen

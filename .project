@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>Die-Fabuloesen-Programmierer-Schlampen</name>
+	<name>Tower_Buttons</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -14,10 +14,4 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
-	<variableList>
-		<variable>
-			<name>slick2D</name>
-			<value>file:/C:/Users/Johannes/Documents/Informatik_RPG/SlickLibs</value>
-		</variable>
-	</variableList>
 </projectDescription>
