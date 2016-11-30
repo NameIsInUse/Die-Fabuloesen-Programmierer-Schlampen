@@ -1,4 +1,4 @@
-package obtowerdefense;
+package main;
 
 public class Enemy {
     private int x, y;
