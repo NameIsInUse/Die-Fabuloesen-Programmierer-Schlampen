@@ -71,7 +71,6 @@ public class lane {
 		}
 		return false;
 	}
-<<<<<<< HEAD:OBTowerDefense/src/obtowerdefense/lane.java
 	
 	private void addProjectile(){
 		for(int i = 0; i < projectiles.length; i++){
@@ -81,6 +80,3 @@ public class lane {
 		}
 	}
 }
-=======
-}
->>>>>>> origin/master:src/main/lane.java

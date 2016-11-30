@@ -14,4 +14,10 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<variableList>
+		<variable>
+			<name>Slick2D</name>
+			<value>file:/C:/Users/Johannes/Documents/%23Tills%20Projekt/SlickLibs</value>
+		</variable>
+	</variableList>
 </projectDescription>
