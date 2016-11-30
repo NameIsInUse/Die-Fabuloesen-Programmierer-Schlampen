@@ -1,6 +1,5 @@
 package obtowerdefense;
 
-
 public class Tower {
     private int hp;
     private boolean alive;

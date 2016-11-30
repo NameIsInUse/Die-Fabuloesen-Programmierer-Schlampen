@@ -9,6 +9,10 @@ public class Enemy {
     }
     
     public void update(float dt){
-        x = x - 60*dt;
+        x = x - 50*dt;
+    }
+    
+    public int getX(){
+    	return (int) x;
     }
 }
