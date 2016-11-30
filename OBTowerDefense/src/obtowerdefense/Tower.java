@@ -2,26 +2,25 @@ package obtowerdefense;
 
 
 public class Tower {
-    //Attribute
-    private int leben = 10;
-    private int x, y;
+    private int hp;
+    private boolean alive;
     
-    
-    //Konstruktor
-    public Tower(int a, int b){
-        x = a;
-        y = b;
+    public Tower(int hp){
+    	this.hp = hp;
+    	alive = true;
     }
     
+    public void update(){
+    	if(hp<=0){
+    		alive = false;
+    	}
+    }
     
-    //Methoden
-    public int getY(){return y;}
+    public boolean getAlive(){
+    	return alive;
+    }
     
-    public int getState(){return leben;}
-    
-    public int changeState()
-    {
-        leben = leben-1;
-        return leben;
+    public void subtractHp(int dHp){
+    	hp-=dHp;
     }
 }

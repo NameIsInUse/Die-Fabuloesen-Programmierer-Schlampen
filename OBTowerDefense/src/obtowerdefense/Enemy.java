@@ -1,26 +1,14 @@
 package obtowerdefense;
 
-
 public class Enemy {
-    //Attribute
-    private int x, y;
+    private float x;
     
-    
-    //Konstruktor
-    public Enemy(int a, int b)
+    public Enemy(int x)
     {
-        x = a;
-        y = b;
+        this.x = (float) x;
     }
     
-    
-    //Methoden
-    public int getX(){return x;}
-    
-    public int getY(){return y;}
-    
-    public int changeX(){
-        x = x-1;
-        return x;
+    public void update(float dt){
+        x = x - 60*dt;
     }
 }
