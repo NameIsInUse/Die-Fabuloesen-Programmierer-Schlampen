@@ -6,4 +6,8 @@ public class Stone implements MazeElement{
 		return false;
 	}
 
+	@Override
+	public Direction getDirection() {
+		return new Direction(0);
+	}
 }

@@ -1,5 +1,7 @@
 public class Maze {
 	
+	//Richtungen (Directions) bitte nur als Direction() speichern, nicht als int oder byte!
+	
 	private int width, height;
 	
 	private MazeElement[][] mazeElements;
@@ -15,14 +17,37 @@ public class Maze {
 				mazeElements[w][h] = new Stone();
 			}
 		}
+		
+		addStartRail();
+		
+		addRails();
+		
+		showMazeOnConsole();
 	}
 	
+	private void showMazeOnConsole() {
+		for(int h = 0; h<height; h++){
+			for(int w = 0; w<width; w++){
+				System.out.print(mazeElements[w][h].getDirection().getDir() + "\t");
+			}
+			System.out.println("");
+		}
+	}
+
 	private void addStartRail(){
 		mazeElements[(int) (width*0.5f)][(int) (height*0.5f)] = new StartRail(new Direction((int) (java.lang.Math.random()*4) +1));
 	}
 	
+	private void addRails(){
+		for(int w = 0; w<width; w++){
+			for(int h = 0; h<height; h++){
+				addRail(w, h);
+			}
+		}
+	}
+	
 	private void addRail(int x, int y){
-		boolean[] possibleDirection = new boolean[4];
+		boolean[] possibleDirection = new boolean[5];
 		byte possibleDirectionNumber = 0;
 		
 		//check for connection to top
@@ -49,7 +74,18 @@ public class Maze {
 			possibleDirectionNumber++;
 		}
 		
-		//add a rail that connects the given connections
+		switch(possibleDirectionNumber){
+		case(0): break;
+		case(1): {
+				if(possibleDirection[1] || possibleDirection[3]){
+					mazeElements[x][y] = new StandardRail(new Direction(1));
+					break;
+				} else {
+					mazeElements[x][y] = new StandardRail(new Direction(2));
+					break;
+				}
+			}
+		}
 	}
 	
 	private boolean isConnectedToDirection(int x, int y, Direction direction){
