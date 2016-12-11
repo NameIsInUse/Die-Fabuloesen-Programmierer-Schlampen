@@ -1,5 +1,7 @@
 public class Maze {
 	
+	//Richtungen (Directions) bitte nur als Direction() speichern, nicht als int oder byte!
+	
 	private int width, height;
 	
 	private MazeElement[][] mazeElements;
