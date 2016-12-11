@@ -19,5 +19,10 @@ public class StandardRail implements MazeElement{
 		
 		return false;
 	}
+
+	@Override
+	public Direction getDirection() {
+		return direction;
+	}
 	
 }

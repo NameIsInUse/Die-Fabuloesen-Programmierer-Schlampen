@@ -12,4 +12,8 @@ public class StartRail implements MazeElement{
 		return (dir.isEqualTo(direction));
 	}
 
+	@Override
+	public Direction getDirection() {
+		return direction;
+	}
 }
